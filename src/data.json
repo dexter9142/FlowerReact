@@ -1,0 +1,209 @@
+[
+  {
+    "name": "Rose",
+    "price": 12.99,
+    "location": "Garden City",
+    "averageReviewNote": 4.5,
+    "numberOfReviews": 27,
+    "image": "https://example.com/rose.jpg",
+    "isPromoted": false
+  },
+  {
+    "name": "Tulip",
+    "price": 8.99,
+    "location": "Flower Valley",
+    "averageReviewNote": 4.2,
+    "numberOfReviews": 18,
+    "image": "https://example.com/tulip.jpg",
+    "isPromoted": true
+  },
+  {
+    "name": "Sunflower",
+    "price": 6.99,
+    "location": "Sunny Fields",
+    "averageReviewNote": 4.8,
+    "numberOfReviews": 35,
+    "image": "https://example.com/sunflower.jpg",
+    "isPromoted": false
+  },
+  {
+    "name": "Orchid",
+    "price": 14.99,
+    "location": "Tropical Paradise",
+    "averageReviewNote": 4.6,
+    "numberOfReviews": 12,
+    "image": "https://example.com/orchid.jpg",
+    "isPromoted": true
+  },
+  {
+    "name": "Lily",
+    "price": 9.99,
+    "location": "Garden Oasis",
+    "averageReviewNote": 4.4,
+    "numberOfReviews": 23,
+    "image": "https://example.com/lily.jpg",
+    "isPromoted": false
+  },
+  {
+    "name": "Carnation",
+    "price": 7.99,
+    "location": "Fragrant Meadows",
+    "averageReviewNote": 4.1,
+    "numberOfReviews": 8,
+    "image": "https://example.com/carnation.jpg",
+    "isPromoted": true
+  },
+  {
+    "name": "Daisy",
+    "price": 5.99,
+    "location": "Daisy Fields",
+    "averageReviewNote": 4.3,
+    "numberOfReviews": 15,
+    "image": "https://example.com/daisy.jpg",
+    "isPromoted": false
+  },
+  {
+    "name": "Hyacinth",
+    "price": 11.99,
+    "location": "Spring Gardens",
+    "averageReviewNote": 4.7,
+    "numberOfReviews": 31,
+    "image": "https://example.com/hyacinth.jpg",
+    "isPromoted": false
+  },
+  {
+    "name": "Cactus",
+    "price": 7.49,
+    "location": "Desert Oasis",
+    "averageReviewNote": 4.0,
+    "numberOfReviews": 6,
+    "image": "https://example.com/cactus.jpg",
+    "isPromoted": false
+  },
+  {
+    "name": "Daffodil",
+    "price": 8.49,
+    "location": "Sunny Meadows",
+    "averageReviewNote": 4.2,
+    "numberOfReviews": 14,
+    "image": "https://example.com/daffodil.jpg",
+    "isPromoted": true
+  },
+  {
+    "name": "Peony",
+    "price": 13.99,
+    "location": "Enchanted Garden",
+    "averageReviewNote": 4.9,
+    "numberOfReviews": 41,
+    "image": "https://example.com/peony.jpg",
+    "isPromoted": false
+  },
+  {
+    "name": "Gerbera",
+    "price": 9.49,
+    "location": "Colorful Fields",
+    "averageReviewNote": 4.3,
+    "numberOfReviews": 19,
+    "image": "https://example.com/gerbera.jpg",
+    "isPromoted": true
+  },
+  {
+    "name": "Dahlia",
+    "price": 12.49,
+    "location": "Dahlia Gardens",
+    "averageReviewNote": 4.6,
+    "numberOfReviews": 25,
+    "image": "https://example.com/dahlia.jpg",
+    "isPromoted": false
+  },
+  {
+    "name": "Carnation",
+    "price": 7.99,
+    "location": "Fragrant Meadows",
+    "averageReviewNote": 4.1,
+    "numberOfReviews": 18,
+    "image": "https://example.com/carnation.jpg",
+    "isPromoted": false
+  },
+  {
+    "name": "Orchid",
+    "price": 14.99,
+    "location": "Tropical Paradise",
+    "averageReviewNote": 4.6,
+    "numberOfReviews": 32,
+    "image": "https://example.com/orchid.jpg",
+    "isPromoted": false
+  },
+  {
+    "name": "Lily",
+    "price": 9.99,
+    "location": "Garden Oasis",
+    "averageReviewNote": 4.4,
+    "numberOfReviews": 21,
+    "image": "https://example.com/lily.jpg",
+    "isPromoted": true
+  },
+  {
+    "name": "Carnation",
+    "price": 7.99,
+    "location": "Fragrant Meadows",
+    "averageReviewNote": 4.1,
+    "numberOfReviews": 11,
+    "image": "https://example.com/carnation.jpg",
+    "isPromoted": false
+  },
+  {
+    "name": "Daisy",
+    "price": 5.99,
+    "location": "Daisy Fields",
+    "averageReviewNote": 4.3,
+    "numberOfReviews": 17,
+    "image": "https://example.com/daisy.jpg",
+    "isPromoted": false
+  },
+  {
+    "name": "Hyacinth",
+    "price": 11.99,
+    "location": "Spring Gardens",
+    "averageReviewNote": 4.7,
+    "numberOfReviews": 28,
+    "image": "https://example.com/hyacinth.jpg",
+    "isPromoted": true
+  },
+  {
+    "name": "Cactus",
+    "price": 7.49,
+    "location": "Desert Oasis",
+    "averageReviewNote": 4.0,
+    "numberOfReviews": 9,
+    "image": "https://example.com/cactus.jpg",
+    "isPromoted": false
+  },
+  {
+    "name": "Daffodil",
+    "price": 8.49,
+    "location": "Sunny Meadows",
+    "averageReviewNote": 4.2,
+    "numberOfReviews": 16,
+    "image": "https://example.com/daffodil.jpg",
+    "isPromoted": false
+  },
+  {
+    "name": "Peony",
+    "price": 13.99,
+    "location": "Enchanted Garden",
+    "averageReviewNote": 4.9,
+    "numberOfReviews": 39,
+    "image": "https://example.com/peony.jpg",
+    "isPromoted": true
+  },
+  {
+    "name": "Gerbera",
+    "price": 9.49,
+    "location": "Colorful Fields",
+    "averageReviewNote": 4.3,
+    "numberOfReviews": 22,
+    "image": "https://example.com/gerbera.jpg",
+    "isPromoted": false
+  }
+]
