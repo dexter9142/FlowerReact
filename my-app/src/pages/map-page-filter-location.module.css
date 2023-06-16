@@ -1,0 +1,251 @@
+.notchIcon {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 82px);
+  width: 164px;
+  height: 32px;
+}
+.div,
+.statusbarTime {
+  position: absolute;
+  width: 54px;
+}
+.div {
+  top: 1px;
+  left: 0;
+  letter-spacing: -0.41px;
+  line-height: 22px;
+  font-weight: 600;
+  display: inline-block;
+  height: 20px;
+}
+.statusbarTime {
+  top: 0;
+  left: calc(50% - 27px);
+  border-radius: 24px;
+  height: 21px;
+}
+.leftSide,
+.rightSideIcon {
+  position: absolute;
+  top: 14px;
+  left: calc(50% - 168px);
+  width: 54px;
+  height: 21px;
+}
+.rightSideIcon {
+  top: 19px;
+  left: calc(50% + 91px);
+  width: 77.4px;
+  height: 13px;
+}
+.statusbarIphone13 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 390px;
+  height: 47px;
+  overflow: hidden;
+  font-family: "SF Pro Text";
+}
+.iconsolidchevronLeft {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.button {
+  position: absolute;
+  top: calc(50% - 2176px);
+  right: 338px;
+  border-radius: 8px;
+  background-color: #f1f5f9;
+  border: 1px solid #64748b;
+  box-sizing: border-box;
+  height: 36px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: 6px 8px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.inputText {
+  position: absolute;
+  top: 16px;
+  left: 12px;
+  line-height: 24px;
+}
+.iconsolidx {
+  position: absolute;
+  top: calc(50% - 10px);
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+.basicInput,
+.basicInputWrapper {
+  align-self: stretch;
+  border-radius: 8px;
+}
+.basicInput {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #94a3b8;
+  box-sizing: border-box;
+  height: 56px;
+}
+.basicInputWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.pointMapIcon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.button1 {
+  border-radius: 8px;
+  background-color: #f1f5f9;
+  height: 56px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+.inputText1 {
+  position: relative;
+  line-height: 24px;
+}
+.buttonParent {
+  width: 326px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+.instanceParent {
+  align-items: flex-start;
+  gap: 16px;
+  color: #0f172a;
+}
+.frameParent,
+.instanceParent,
+.mapPageFilterLocationInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.frameParent {
+  align-self: stretch;
+  flex: 1;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  padding: 24px 16px;
+  align-items: center;
+  gap: 24px;
+}
+.mapPageFilterLocationInner {
+  position: absolute;
+  top: 139px;
+  left: -1px;
+  width: 390px;
+  height: 560px;
+  padding: 0 16px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  text-align: left;
+  font-size: 16px;
+  color: #94a3b8;
+}
+.tab2 {
+  position: absolute;
+  bottom: 12px;
+  left: calc(50% - 14.5px);
+  line-height: 20px;
+  font-weight: 600;
+}
+.mobileTabChild {
+  width: 100%;
+  left: 0;
+  height: 3px;
+}
+.mobileTab,
+.mobileTabChild,
+.mobileTabItem {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.mobileTabItem {
+  width: 100%;
+  left: 0;
+  background-color: #cbd5e1;
+  height: 1px;
+}
+.mobileTab {
+  height: 100%;
+  width: 50%;
+  top: 0;
+  left: 50%;
+}
+.tab1 {
+  position: absolute;
+  bottom: 12px;
+  left: calc(50% - 12.5px);
+  line-height: 20px;
+  font-weight: 600;
+}
+.mobileTab1,
+.mobileTabInner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.mobileTabInner {
+  width: 100%;
+  right: 0;
+  background-color: #fb814c;
+  height: 3px;
+}
+.mobileTab1 {
+  height: 100%;
+  width: 50%;
+  top: 0;
+  right: 50%;
+  color: #fa6f32;
+}
+.tabExample {
+  position: absolute;
+  top: 71px;
+  left: 15px;
+  width: 358px;
+  height: 44px;
+  font-size: 14px;
+  color: #475569;
+}
+.mapPageFilterLocation {
+  position: relative;
+  background-color: #f8fafc;
+  width: 100%;
+  height: 724px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 17px;
+  color: #010101;
+  font-family: Inter;
+}
