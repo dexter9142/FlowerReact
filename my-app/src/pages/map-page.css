@@ -4,6 +4,15 @@
   left: 12px;
   line-height: 24px;
 }
+
+button {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  border: inherit;
+  font-size: inherit;
+}
+
 .basic-input {
   flex: 1;
   position: relative;
@@ -185,6 +194,8 @@
 }
 
 .list-container {
+  display: flex;
+  flex-direction: column;
   height: inherit;
 }
 
@@ -308,6 +319,34 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+
+.button7 {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px); /* Adjust the value as needed to position the dropdown below the button */
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#priceButton {
+  cursor: pointer;
+}
+
+.dropdown-option {
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* Add your additional styling as needed */
+
+
 .map-container {
   /*top: 179px;*/
   position: relative;
@@ -345,16 +384,19 @@
 .list-upper {
   display: flex;
   justify-content: space-between;
+  padding: 16px;
 }
 
 .list-buttons {
   display: flex;
+  gap: 16px;
 }
 
 .results-found {
   position: relative;
   /*top: 211px;*/
   /*left: 66px;*/
+  margin: auto 0;
   line-height: 20px;
   color: #000;
 }
@@ -412,7 +454,8 @@
 }
 .frame-container {
   border-radius: 8px;
-  height: 200px;
+  height: 24vh;
+
   background-image: url(/public/frame-2403@3x.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -825,4 +868,20 @@
 main {
   display: flex;
   justify-content: space-around;
+}
+
+
+/* Responsive/Adaptive */
+
+@media (max-width: 800px) {
+  main {
+    flex-direction: column;
+  }
+  .map-container {
+    order: 1;
+  }
+  .list-container {
+    order: 2;
+  }
+
 }

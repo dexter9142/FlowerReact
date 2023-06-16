@@ -1,6 +1,44 @@
 import { FunctionComponent } from "react";
 import "./map-page.css";
+import {useState} from "react";
+import Draggable from 'react-draggable';
 const MapPage: FunctionComponent = () => {
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState('');
+
+  const handleButtonClick = (): void => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleOptionClick = (option: string): void => {
+    setSelectedOption(option);
+    setIsOpen(false);
+    // Perform sorting based on the selected option
+    // Add your logic here
+  };
+
+  const vecicleCardParentData = [
+    {
+      id: 1,
+      text: 'Tulips',
+      country: 'China',
+      distance: '1 km',
+      rating: '5,0 (12)',
+      price: '$1',
+    },
+    {
+      id: 2,
+      text: 'Roses',
+      country: 'USA',
+      distance: '2 km',
+      rating: '4,5 (8)',
+      price: '$2',
+    },
+  ];
+
+
+
   return (
     <div className="map-page">
       <div className="component-11">
@@ -21,23 +59,25 @@ const MapPage: FunctionComponent = () => {
             </div>
           </div>
           <div className="button-parent">
-            <div className="button">
-              <div className="text">Give five</div>
-            </div>
-            <div className="button1">
+            <button onClick={() => {alert("Give Five")}} className="button">
+
+              <div className="text">
+                Give five</div>
+            </button>
+            <button onClick={() => {alert("Notification Bell")}} className="button1">
               <img
                 className="iconoutlinebell"
                 alt=""
                 src="/iconoutlinebell.svg"
               />
-            </div>
+            </button>
             <div className="button-group">
-              <div className="button2">
+              <button onClick={() => {alert("Profile")}}className="button2">
                 <div className="photo">
                   <img className="face-37-icon" alt="" src="/face-37@2x.png" />
                 </div>
                 <div className="text">Profile</div>
-              </div>
+              </button>
               <div className="button3">
                 <img
                   className="iconoutlinebell"
@@ -48,7 +88,7 @@ const MapPage: FunctionComponent = () => {
             </div>
             <div className="frame-child" />
           </div>
-          <div className="the-logo-maker-built-for-1000" />
+          <button onClick={() => {alert("Home")}} className="the-logo-maker-built-for-1000" />
         </div>
       </div>
       <div className="rectangle-parent">
@@ -201,234 +241,111 @@ const MapPage: FunctionComponent = () => {
               <img className="iconoutlinesearch" alt="" src="/iconoutlinebell1.svg" />
               <div className="day">Follow the filter</div>
             </div>
-          <div className="button7">
-            <div className="day">Sort by</div>
-            <img
-                className="iconoutlinesearch"
-                alt=""
-                src="/iconsolidchevrondown.svg"
-            />
-          </div>
+              <div className="button7">
+                <div className="day" onClick={handleButtonClick}>
+                  Sort by
+                </div>
+                <img
+                    className="iconoutlinesearch"
+                    alt=""
+                    src="/iconsolidchevrondown.svg"
+                    onClick={handleButtonClick}
+                />
+
+                {isOpen && (
+                    <div className="dropdown-menu">
+                      <div
+                          className="dropdown-option"
+                          onClick={() => handleOptionClick('by date')}
+                      >
+                        by date
+                      </div>
+                      <div
+                          className="dropdown-option"
+                          onClick={() => handleOptionClick('by price')}
+                      >
+                        by price
+                      </div>
+                    </div>
+                )}
+              </div>
             </div>
 
 
           </div>
           <div className="frame-group">
-            <div className="vecicle-card-parent">
-              <div className="vecicle-card">
-                <div className="frame-container">
-                  <div className="ellipse-parent">
-                    <div className="frame-item" />
-                    <div className="frame-inner" />
-                    <div className="frame-inner" />
-                    <div className="frame-inner" />
-                  </div>
-                  <img
-                      className="mdicards-heart-outline-icon"
-                      alt=""
-                      src="/mdicardsheartoutline.svg"
-                  />
-                  <div className="rivip-crown-line-parent">
-                    <img
-                        className="iconoutlinesearch"
-                        alt=""
-                        src="/rivipcrownline.svg"
-                    />
-                    <div className="premium">Premium</div>
-                  </div>
-                </div>
-                <div className="frame-div">
-                  <div className="peterbilt-579-parent">
-                    <div className="text">Tulips</div>
-                    <div className="rectangle-div" />
-                    <div className="tandem-tractor">flower</div>
-                  </div>
-                  <div className="frame-parent1">
-                    <div className="ohio-parent">
-                      <div className="ohio">China</div>
-                      <div className="rectangle-div" />
-                      <div className="ohio">1 km</div>
-                      <div className="rectangle-div" />
+            {vecicleCardParentData.map((cardParent) => (
+                <div className="vecicle-card-parent" key={cardParent.id}>
+                  <div className="vecicle-card">
+                    <div className="frame-container">
+                      {/* Rest of the code */}
                     </div>
-                    <div className="ohio">Owner</div>
-                    <div className="material-symbolsstar-parent">
-                      <img
-                          className="material-symbolsstar-icon"
-                          alt=""
-                          src="/materialsymbolsstar.svg"
-                      />
-                      <div className="ohio">5,0 (12)</div>
+                    <div className="frame-div">
+                      <div className="peterbilt-579-parent">
+                        <div className="text">{cardParent.text}</div>
+                        <div className="rectangle-div" />
+                        <div className="tandem-tractor">flower</div>
+                      </div>
+                      <div className="frame-parent1">
+                        <div className="ohio-parent">
+                          <div className="ohio">{cardParent.country}</div>
+                          <div className="rectangle-div" />
+                          <div className="ohio">{cardParent.distance}</div>
+                          <div className="rectangle-div" />
+                        </div>
+                        <div className="ohio">Owner</div>
+                        <div className="material-symbolsstar-parent">
+                          <img
+                              className="material-symbolsstar-icon"
+                              alt=""
+                              src="/materialsymbolsstar.svg"
+                          />
+                          <div className="ohio">{cardParent.rating}</div>
+                        </div>
+                      </div>
+                      <div className="frame-wrapper">
+                        <div className="day-wrapper">
+                          <div className="day">{cardParent.price}</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div className="frame-wrapper">
-                    <div className="day-wrapper">
-                      <div className="day">$1</div>
+                  <div className="vecicle-card">
+                    <div className="frame-container">
+                      {/* Rest of the code */}
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div className="vecicle-card">
-                <div className="frame-container">
-                  <div className="ellipse-parent">
-                    <div className="frame-item" />
-                    <div className="frame-inner" />
-                    <div className="frame-inner" />
-                    <div className="frame-inner" />
-                  </div>
-                  <img
-                      className="mdicards-heart-outline-icon"
-                      alt=""
-                      src="/mdicardsheartoutline.svg"
-                  />
-                  <div className="rivip-crown-line-group">
-                    <img
-                        className="iconoutlinesearch"
-                        alt=""
-                        src="/rivipcrownline1.svg"
-                    />
-                    <div className="premium">Premium</div>
-                  </div>
-                </div>
-                <div className="frame-div">
-                  <div className="peterbilt-579-parent">
-                    <div className="text">Tulips</div>
-                    <div className="rectangle-div" />
-                    <div className="tandem-tractor">flower</div>
-                  </div>
-                  <div className="frame-parent1">
-                    <div className="ohio-parent">
-                      <div className="ohio">China</div>
-                      <div className="rectangle-div" />
-                      <div className="ohio">1 km</div>
-                      <div className="rectangle-div" />
-                    </div>
-                    <div className="ohio">Owner</div>
-                    <div className="material-symbolsstar-parent">
-                      <img
-                          className="material-symbolsstar-icon"
-                          alt=""
-                          src="/materialsymbolsstar.svg"
-                      />
-                      <div className="ohio">5,0 (12)</div>
-                    </div>
-                  </div>
-                  <div className="frame-wrapper">
-                    <div className="day-wrapper">
-                      <div className="day">$1</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="vecicle-card-parent">
-              <div className="vecicle-card">
-                <div className="frame-container">
-                  <div className="ellipse-parent">
-                    <div className="frame-item" />
-                    <div className="frame-inner" />
-                    <div className="frame-inner" />
-                    <div className="frame-inner" />
-                  </div>
-                  <img
-                      className="mdicards-heart-outline-icon"
-                      alt=""
-                      src="/mdicardsheartoutline.svg"
-                  />
-                  <div className="rivip-crown-line-group">
-                    <img
-                        className="iconoutlinesearch"
-                        alt=""
-                        src="/rivipcrownline1.svg"
-                    />
-                    <div className="premium">Premium</div>
-                  </div>
-                </div>
-                <div className="frame-div">
-                  <div className="peterbilt-579-parent">
-                    <div className="text">Tulips</div>
-                    <div className="rectangle-div" />
-                    <div className="tandem-tractor">flower</div>
-                  </div>
-                  <div className="frame-parent1">
-                    <div className="ohio-parent">
-                      <div className="ohio">China</div>
-                      <div className="rectangle-div" />
-                      <div className="ohio">1 km</div>
-                      <div className="rectangle-div" />
-                    </div>
-                    <div className="ohio">Owner</div>
-                    <div className="material-symbolsstar-parent">
-                      <img
-                          className="material-symbolsstar-icon"
-                          alt=""
-                          src="/materialsymbolsstar.svg"
-                      />
-                      <div className="ohio">5,0 (12)</div>
-                    </div>
-                  </div>
-                  <div className="frame-wrapper">
-                    <div className="day-wrapper">
-                      <div className="day">$1</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="vecicle-card">
-                <div className="frame-container">
-                  <div className="ellipse-parent">
-                    <div className="frame-item" />
-                    <div className="frame-inner" />
-                    <div className="frame-inner" />
-                    <div className="frame-inner" />
-                  </div>
-                  <img
-                      className="mdicards-heart-outline-icon"
-                      alt=""
-                      src="/mdicardsheartoutline.svg"
-                  />
-                  <div className="rivip-crown-line-group">
-                    <img
-                        className="iconoutlinesearch"
-                        alt=""
-                        src="/rivipcrownline1.svg"
-                    />
-                    <div className="premium">Premium</div>
-                  </div>
-                </div>
-                <div className="frame-div">
-                  <div className="peterbilt-579-parent">
-                    <div className="text">Tulips</div>
-                    <div className="rectangle-div" />
-                    <div className="tandem-tractor">flower</div>
-                  </div>
-                  <div className="frame-parent1">
-                    <div className="ohio-parent">
-                      <div className="ohio">China</div>
-                      <div className="rectangle-div" />
-                      <div className="ohio">1 km</div>
-                      <div className="rectangle-div" />
-                    </div>
-                    <div className="ohio">Owner</div>
-                    <div className="material-symbolsstar-parent">
-                      <img
-                          className="material-symbolsstar-icon"
-                          alt=""
-                          src="/materialsymbolsstar.svg"
-                      />
-                      <div className="ohio">5,0 (12)</div>
-                    </div>
-                  </div>
-                  <div className="frame-wrapper">
-                    <div className="day-wrapper">
-                      <div className="ohio">
-                        <span className="span">$1</span>
-                        <b>{` `}</b>
+                    <div className="frame-div">
+                      <div className="peterbilt-579-parent">
+                        <div className="text">{cardParent.text}</div>
+                        <div className="rectangle-div" />
+                        <div className="tandem-tractor">flower</div>
+                      </div>
+                      <div className="frame-parent1">
+                        <div className="ohio-parent">
+                          <div className="ohio">{cardParent.country}</div>
+                          <div className="rectangle-div" />
+                          <div className="ohio">{cardParent.distance}</div>
+                          <div className="rectangle-div" />
+                        </div>
+                        <div className="ohio">Owner</div>
+                        <div className="material-symbolsstar-parent">
+                          <img
+                              className="material-symbolsstar-icon"
+                              alt=""
+                              src="/materialsymbolsstar.svg"
+                          />
+                          <div className="ohio">{cardParent.rating}</div>
+                        </div>
+                      </div>
+                      <div className="frame-wrapper">
+                        <div className="day-wrapper">
+                          <div className="day">{cardParent.price}</div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+            ))}
             <div className="toast">
               <div className="iconoutlinetruck-parent">
                 <img
@@ -446,12 +363,12 @@ const MapPage: FunctionComponent = () => {
                 </div>
               </div>
               <div className="button9">
-                <div className="text4">
+                <div className="text4" onClick={()=> alert("Clear Filters")}>
                   <p className="clear-filters">Clear filters</p>
                   <p className="more-458-transport">More 458 transport options</p>
                 </div>
               </div>
-              <div className="button10">
+              <div className="button10" onClick={()=> alert("Clear filters")}>
                 <div className="day">Clear filters</div>
               </div>
             </div>
@@ -529,6 +446,7 @@ const MapPage: FunctionComponent = () => {
             </div>
           </div>
         </div>
+
       <div className="map-container">
         <div className="button4">
           <img
@@ -554,16 +472,16 @@ const MapPage: FunctionComponent = () => {
           </div>
         </div>
         <img className="image-76-icon" alt="" src="/image-76@2x.png" />
-        <div className="component-13">
+        <div className="component-13" id="priceButton" onClick={()=> alert("Price button")}>
           <div className="text">10$</div>
         </div>
-        <div className="component-14">
+        <div className="component-14" id="priceButton" onClick={()=> alert("Price button")}>
           <div className="text">10$</div>
         </div>
-        <div className="component-15">
+        <div className="component-15" id="priceButton" onClick={()=> alert("Price button")}>
           <div className="text">10$</div>
         </div>
-        <div className="component-16">
+        <div className="component-16" id="priceButton" onClick={()=> alert("Price button")}>
           <div className="text">5$</div>
         </div>
       </div>
