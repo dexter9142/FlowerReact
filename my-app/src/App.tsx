@@ -8,7 +8,11 @@ import MapPage from "./pages/map-page";
 import MapPageFilterLocation from "./pages/map-page-filter-location";
 import MapPageFilter from "./pages/map-page-filter";
 import MapPage1 from "./pages/map-page1";
+import Whoops from "./components/Whoops";
 import { useEffect } from "react";
+import { connect} from "react-redux";
+import store from "./store/store";
+
 
 function App() {
   const action = useNavigationType();
@@ -59,15 +63,18 @@ function App() {
   }, [pathname]);
 
   return (
+
     <Routes>
       <Route path="/" element={<MapPage />} />
       <Route
-        path="/map-page-filter-location"
+        path="/map-location"
         element={<MapPageFilterLocation />}
       />
-      <Route path="/map-page-filter" element={<MapPageFilter />} />
+      <Route path="/map-filter" element={<MapPageFilter />} />
       <Route path="/map-page" element={<MapPage1 />} />
+      <Route path="/whoops" element={<Whoops />} />
     </Routes>
+
   );
 }
-export default App;
+export default connect(store => store)(App);

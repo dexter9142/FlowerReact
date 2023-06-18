@@ -289,3 +289,54 @@
   color: #010101;
   font-family: Inter;
 }
+
+.tab-example1{
+  position: relative;
+  top:0;
+  left:0;
+  width: 100vw;
+}
+
+.map-page-filter-inner {
+  position: relative;
+  top :2vh;
+  width: 100vw;
+  left: 0;
+}
+
+.accordionframe-2435-parent > *:hover {
+  border-radius: 8px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 16px 0px;
+
+}
+.accordionframe-2435-group > * {
+  padding: 16px 0;
+}
+
+.accordionframe-2435-group > *:hover {
+  border-radius: 8px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 16px 0px;
+
+}
+
+.input-text9 {
+  top: 1vh;
+}
+
+input {
+  border: 0;
+  font-size: 24pt;
+  width: 65vw;
+}
+
+.button20 {
+  cursor: pointer;
+}
+
+.button20:hover {
+  filter: brightness(80%);
+}

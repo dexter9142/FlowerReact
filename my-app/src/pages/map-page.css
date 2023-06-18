@@ -197,6 +197,7 @@ button {
   display: flex;
   flex-direction: column;
   height: inherit;
+  min-width: 0;
 }
 
 .frame-parent {
@@ -214,7 +215,8 @@ button {
 .component-11 {
   position: relative;
   top: 0;
-  width: 100%;
+  width: 86%;
+  margin: auto;
   height: 84px;
   font-size: 16px;
   color: #94a3b8;
@@ -349,10 +351,11 @@ button {
 
 .map-container {
   /*top: 179px;*/
+  top: 1vh;
   position: relative;
   /*left: 812px;*/
-  width: 788px;
-  height: 821px;
+  width: 41vw;
+  height: 87vh;
   background-image: url(/public/frame-2394@3x.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -384,6 +387,8 @@ button {
 .list-upper {
   display: flex;
   justify-content: space-between;
+  width: 90%;
+  margin: auto;
   padding: 16px;
 }
 
@@ -455,12 +460,22 @@ button {
 .frame-container {
   border-radius: 8px;
   height: 24vh;
-
   background-image: url(/public/frame-2403@3x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
 }
+
+.frame-container-fallback {
+  border-radius: 8px;
+  height: 24vh;
+  background-image: url(/public/frame-2403@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+
 .rectangle-div {
   background-color: #cbd5e1;
   width: 2px;
@@ -529,6 +544,8 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
+
 }
 .frame-div {
   align-self: stretch;
@@ -540,7 +557,117 @@ button {
   flex: 1;
   align-items: center;
   gap: 12px;
+
 }
+
+.vecicle-card {
+  position: relative;
+}
+
+.vecicle-card:hover .promoted-box {
+  display: block;
+}
+
+.vecicle-card:hover .arrow-button {
+  display: block;
+  z-index: 2;
+  top: 35%;
+}
+
+.strikethrough-price {
+  display: none;
+}
+
+.vecicle-card:hover .strikethrough-price {
+  display: block;
+  text-decoration: line-through;
+  font-weight: bold;
+  color: gray;
+  bottom: 2px;
+  left: 0;
+}
+
+.vecicle-card:hover .discount-box {
+  display: block;
+  bottom: -3px;
+}
+
+.vecicle-card:hover .day {
+  left: 3vw !important;
+}
+
+
+.promoted-box {
+  position: absolute;
+  top: 1vh;
+  left: 1vw;
+  z-index: 2;
+  background-color: cornflowerblue;
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+  display: none;
+}
+
+.input-left-content {
+  top: 0;
+}
+
+.tandem-tractor > input {
+  position: relative;
+  border: 0;
+  width: 9vw;
+  font-size: 24pt;
+}
+
+input:focus {
+  outline: none;
+}
+
+.button8:hover, .button7:hover, .button10:hover, .frame-container:hover,
+.button-group:hover, .button:hover, .button1:hover, .button4:hover,
+.button5:hover, .button6:hover, .button11:hover {
+  cursor: pointer;
+  filter: brightness(80%);
+}
+
+#priceButton:hover {
+  border: 4px solid orangered;
+  box-sizing: border-box;
+}
+
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.strikethrough-price {
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  text-decoration: line-through;
+}
+
+.discount-box {
+  position: absolute;
+  bottom: 0;
+  left: 6vw;
+  background-color: mediumseagreen;
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+  display: none;
+}
+
+
 .rivip-crown-line-group,
 .vecicle-card-parent {
   flex-direction: row;
@@ -561,6 +688,16 @@ button {
   align-self: stretch;
   display: flex;
   gap: 24px;
+  column-gap: 5vh;
+  display: grid;
+  grid-template-columns: 300px 300px;
+  justify-content: center;
+  height: 75vh;
+  overflow: auto;
+}
+
+.vecicle-card-parent::-webkit-scrollbar {
+  display: none;
 }
 .span {
   font-weight: 600;
@@ -663,7 +800,7 @@ button {
   flex-direction: row;
 }
 .content {
-  padding: 16px 4px 0 0;
+  padding: 3px 4px 0 0;
   align-items: center;
   justify-content: flex-start;
   gap: 12px;
@@ -676,12 +813,15 @@ button {
 .top-border3 {
   align-self: stretch;
   position: relative;
-  background-color: #fb814c;
+  /*background-color: #fb814c;*/
   height: 2px;
+  justify-content: center;
 }
 .number-links,
 .paginationnumber-link1 {
   align-items: flex-start;
+  height: 3vh;
+  width: 1vw;
   justify-content: flex-start;
 }
 .paginationnumber-link1 {
@@ -692,6 +832,7 @@ button {
 }
 .number-links {
   text-align: center;
+  justify-content: center;
 }
 .content8,
 .links,
@@ -699,9 +840,14 @@ button {
   display: flex;
   flex-direction: row;
 }
+.more-distant-but-no-less-impo-parent, paginationnumber-link1{
+  cursor: pointer;
+}
+
+
 .content8 {
   align-self: stretch;
-  padding: 16px 0 0 4px;
+  padding: 3px 0 0 4px;
   align-items: center;
   justify-content: flex-start;
   gap: 12px;
@@ -723,15 +869,14 @@ button {
 }
 .frame-group {
   position: relative;
-  /*top: 263px;*/
-  /*left: 64px;*/
-  width: 724px;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 32px;
   color: #fff;
+
 }
 .frame-child25 {
   position: absolute;
@@ -772,6 +917,7 @@ button {
 }
 .choice {
   display: flex;
+  cursor: pointer;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
@@ -809,12 +955,13 @@ button {
   top: 1px;
   left: 0;
   background-color: #fff;
-  width: 1440px;
+  /*width: 1440px;*/
   display: flex;
   flex-direction: row;
   padding: 24px 64px;
   box-sizing: border-box;
   align-items: center;
+  padding-left: 2vw !important;
   justify-content: flex-start;
   gap: 48px;
 }
@@ -848,7 +995,8 @@ button {
   /*top: 82px;*/
   justify-content: space-between;
   left: 0;
-  width: 100%;
+  width: 86%;
+  margin: auto;
   height: 97px;
 }
 .map-page {
@@ -857,7 +1005,6 @@ button {
   padding-left:1vh;
   padding-right:1vh;
   width: 99%;
-  height: 150vh;
   overflow: hidden;
   text-align: left;
   font-size: 14px;
@@ -867,21 +1014,8 @@ button {
 
 main {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 
-/* Responsive/Adaptive */
 
-@media (max-width: 800px) {
-  main {
-    flex-direction: column;
-  }
-  .map-container {
-    order: 1;
-  }
-  .list-container {
-    order: 2;
-  }
-
-}

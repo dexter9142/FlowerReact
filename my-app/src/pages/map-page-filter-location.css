@@ -74,7 +74,7 @@
 }
 .input-text2 {
   position: absolute;
-  top: 16px;
+  top: 1vh;
   left: 12px;
   line-height: 24px;
 }
@@ -160,10 +160,10 @@
   gap: 24px;
 }
 .map-page-filter-location-inner {
-  position: absolute;
-  top: 139px;
-  left: -1px;
-  width: 390px;
+  position: relative;
+  top: 2vh;
+  /*left: -1px;*/
+  width: 100vw;
   height: 560px;
   padding: 0 16px;
   box-sizing: border-box;
@@ -230,10 +230,10 @@
   color: #fa6f32;
 }
 .tab-example {
-  position: absolute;
-  top: 71px;
-  left: 15px;
-  width: 358px;
+  position: relative;
+  /*top: 0px;*/
+  /*left: 15px;*/
+  width: 100vw;
   height: 44px;
   font-size: 14px;
   color: #475569;
@@ -248,4 +248,11 @@
   font-size: 17px;
   color: #010101;
   font-family: Inter;
+}
+
+.input-text2 {
+
+}
+.input-text2 > input {
+  border: 0;
 }

@@ -3,60 +3,10 @@ import "./map-page1.css";
 const MapPage1: FunctionComponent = () => {
   return (
     <div className="map-page1">
-      <div className="header-wrapper">
-        <div className="header">
-          <img
-            className="the-logo-maker-built-for-10001"
-            alt=""
-            src="/the-logo-maker-built-for-1000-industries-and-20m-users@2x.png"
-          />
-          <div className="button21">
-            <img className="iconsolidmenu1" alt="" src="/iconsolidmenu.svg" />
-          </div>
-        </div>
-      </div>
-      <div className="basic-input-group">
-        <div className="basic-input4">
-          <div className="input-left-content1">
-            <img
-              className="iconoutlinesearch1"
-              alt=""
-              src="/iconoutlinesearch1.svg"
-            />
-            <div className="input-text10">China, flower</div>
-          </div>
-        </div>
-        <div className="iconoutlinefilter-wrapper">
-          <img
-            className="iconoutlinesearch1"
-            alt=""
-            src="/iconoutlinefilter.svg"
-          />
-        </div>
-      </div>
-      <div className="statusbar-iphone-132">
-        <img className="notch-icon2" alt="" src="/notch.svg" />
-        <div className="left-side2">
-          <div className="statusbar-time2">
-            <div className="div10">9:41</div>
-          </div>
-        </div>
-        <img className="right-side-icon2" alt="" src="/right-side.svg" />
-      </div>
-      <div className="component-16-parent">
-        <div className="component-161">
-          <div className="div11">115$</div>
-        </div>
-        <div className="component-17">
-          <div className="div11">115$</div>
-        </div>
-        <div className="component-18">
-          <div className="div11">115$</div>
-        </div>
-        <div className="component-19">
-          <div className="div11">115$</div>
-        </div>
-      </div>
+
+
+
+
       <div className="rectangle-group">
         <div className="frame-child41" />
         <div className="results-found-parent">
