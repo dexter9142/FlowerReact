@@ -1,5 +1,5 @@
 import { FunctionComponent, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import "./map-page-filter.css";
 const Filter: FunctionComponent = () => {
     const navigate = useNavigate();
@@ -121,9 +121,11 @@ const Filter: FunctionComponent = () => {
                             </div>
                         </div>
                     </div>
+
                     <div className="button20">
                         <div className="text7">Search</div>
                     </div>
+
                 </div>
             </div>
             <div className="tab-example1">

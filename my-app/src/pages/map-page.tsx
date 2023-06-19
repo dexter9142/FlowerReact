@@ -41,7 +41,6 @@ const MapPage: FunctionComponent = () => {
                 <>
             <HeaderResponsive />
             <Searchbar />
-
                 </>
         )}
         {windowWidth >= 820 ? (

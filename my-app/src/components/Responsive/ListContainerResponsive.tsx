@@ -10,7 +10,6 @@ function ListContainerResponsive() {
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 4;
 
-
     interface Flower {
         name: string;
         price: number;

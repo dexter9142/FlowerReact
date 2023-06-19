@@ -589,6 +589,7 @@ button {
 
 .vecicle-card:hover .discount-box {
   display: block;
+  font-size: 12px;
   bottom: -3px;
 }
 
@@ -963,7 +964,7 @@ input:focus {
   align-items: center;
   padding-left: 2vw !important;
   justify-content: flex-start;
-  gap: 48px;
+  gap: 2.5vw;
 }
 .frame-child27 {
   position: absolute;

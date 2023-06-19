@@ -7,7 +7,7 @@ import {
 import MapPage from "./pages/map-page";
 import MapPageFilterLocation from "./pages/map-page-filter-location";
 import MapPageFilter from "./pages/map-page-filter";
-import MapPage1 from "./pages/map-page1";
+// import MapPage1 from "./pages/map-page1";
 import Whoops from "./components/Whoops";
 import { useEffect } from "react";
 import { connect} from "react-redux";
@@ -71,7 +71,7 @@ function App() {
         element={<MapPageFilterLocation />}
       />
       <Route path="/map-filter" element={<MapPageFilter />} />
-      <Route path="/map-page" element={<MapPage1 />} />
+      <Route path="/map-page" element={<App />} />
       <Route path="/whoops" element={<Whoops />} />
     </Routes>
 

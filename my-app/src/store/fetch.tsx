@@ -37,7 +37,6 @@ export const fetchData = (retryCount = 0) => {
 
 
 const logErrorToServer = (error: Error) => {
-    // Send the error data to the server using an HTTP request or any other suitable method
     fetch('http://localhost:3000/log', {
         method: 'POST',
         headers: {

@@ -43,22 +43,56 @@ const ListContainer: FunctionComponent = () => {
 
     // @ts-ignore
     const FrameContainer = ({ image }) => {
-        const fallbackImageUrl = '/public/frame-2403@3x.png';
+        const fallbackImageUrl = "/public/frame-2403@3x.png";
+        const [imageUrl, setImageUrl] = useState(image);
+        const [imageError, setImageError] = useState(false);
+        const [isEmptyBackgroundImage, setIsEmptyBackgroundImage] = useState(false);
 
-        const handleImageError = (event: any) => {
-            event.target.src = fallbackImageUrl;
+        const handleImageError = () => {
+            setImageError(true);
         };
 
+        useEffect(() => {
+            setImageUrl(image);
+            setImageError(false); // Reset the image error state when a new image is provided
+        }, [image]);
+
+        const style = {
+            backgroundImage: imageError ? "" : `url(${imageUrl})`,
+        };
+
+        useEffect(() => {
+            if (imageUrl) {
+                fetch(imageUrl)
+                    .then(response => {
+                        if (!response.ok) {
+                            // Image URL returns a 404 status, set the image error state
+                            setImageError(true);
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Failed to fetch image:", error);
+                        // Set the image error state on fetch error as well
+                        setImageError(true);
+                    });
+            } else {
+                // Set the image error state if the image URL is empty
+                setImageError(true);
+            }
+        }, [imageUrl]);
+
+        useEffect(() => {
+            setIsEmptyBackgroundImage(style.backgroundImage === "");
+        }, [style.backgroundImage]);
+
         return (
-            <div className="frame-container">
-                <img
-                    src={image}
-                    onError={handleImageError}
-                    alt=""
-                />
+            <div className="frame-container" style={style} onError={handleImageError}>
+                {isEmptyBackgroundImage && <span>No background image</span>}
             </div>
         );
     };
+
+
 
     useEffect(() => {
         setCurrentPage(1);
